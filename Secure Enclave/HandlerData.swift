@@ -31,7 +31,7 @@ class HandlerData {
 
     static let Shared: HandlerData = HandlerData.init()
 
-    let keyForUserDefaultpToPrivateKey = "com.privateKey"
+    let keyForUserDefaults = "com.privateKey"
 
     let algorithm: SecKeyAlgorithm
 
@@ -150,11 +150,11 @@ class HandlerData {
     }
 
     func saveStringSecDataBase64InUserDefault(string: String) {
-        UserDefaults.standard.set(string, forKey: keyForUserDefaultpToPrivateKey)
+        UserDefaults.standard.set(string, forKey: keyForUserDefaults)
     }
 
     func getStringSecDataBase64InUserDefault() -> String? {
-        UserDefaults.standard.string(forKey: keyForUserDefaultpToPrivateKey)
+        UserDefaults.standard.string(forKey: keyForUserDefaults)
     }
 
     func createUniqueID() -> String {
