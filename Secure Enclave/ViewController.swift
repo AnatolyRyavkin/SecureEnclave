@@ -22,7 +22,7 @@ class ViewController: UIViewController, UITextViewDelegate {
 
     @IBOutlet weak var insertOutputToInputButton: UIButton!
 
-    let encoder: HandlerData = HandlerData.Shared
+    let encoderData: EncoderData = EncoderData.Shared
 
 
     override func viewDidLoad() {
@@ -36,18 +36,18 @@ class ViewController: UIViewController, UITextViewDelegate {
     }
 
     @objc func encoding() {
-        let text = self.encoder.encodingStringToSecretStringBase64(stringInput: self.inputTextView.text)
+        let text = self.encoderData.encodingStringToSecretStringBase64(stringInput: self.inputTextView.text)
         self.outputLabel.text = text
-        self.encoder.saveStringSecDataBase64InUserDefault(string: text)
+        self.saveStringSecDataBase64InUserDefault(string: text)
     }
 
     @objc func decoding() {
-        let text = self.encoder.dencodingStringBase64ToString(stringSecretDataBase64: self.inputTextView.text)
+        let text = self.encoderData.dencodingStringBase64ToString(stringSecretDataBase64: self.inputTextView.text)
         self.outputLabel.text = text
     }
 
     @objc func getOldStringSecretDataBase64() {
-        if let oldMeaning = self.encoder.getStringSecDataBase64InUserDefault() {
+        if let oldMeaning = self.getStringSecDataBase64InUserDefault() {
             self.inputTextView.text = oldMeaning
         }else{
             self.inputTextView.text = "Not found"
@@ -56,7 +56,19 @@ class ViewController: UIViewController, UITextViewDelegate {
 
     @objc func insertOutputTextToInputTextView() {
         self.inputTextView.text = self.outputLabel.text
+        self.outputLabel.text = ""
     }
+
+//  сохраняем и извлекаем шифрованные данные в виде строки base64 в UserDefaults, что бы проверить, что ключ храниться при перезапуске
+
+    func saveStringSecDataBase64InUserDefault(string: String) {
+        UserDefaults.standard.set(string, forKey: "someStringForUserDefaults")
+    }
+
+    func getStringSecDataBase64InUserDefault() -> String? {
+        UserDefaults.standard.string(forKey: "someStringForUserDefaults")
+    }
+
 
 
 }

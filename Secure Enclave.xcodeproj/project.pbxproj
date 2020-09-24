@@ -14,6 +14,8 @@
 		FD0A9D0E2519FE6800BAD1F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD0A9D0D2519FE6800BAD1F4 /* Assets.xcassets */; };
 		FD0A9D112519FE6900BAD1F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD0A9D0F2519FE6900BAD1F4 /* LaunchScreen.storyboard */; };
 		FD0A9D19251A96FB00BAD1F4 /* HandlerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0A9D18251A96FB00BAD1F4 /* HandlerData.swift */; };
+		FD27C9FD251BE46500D2B859 /* ManagerKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD27C9FC251BE46500D2B859 /* ManagerKeys.swift */; };
+		FD27C9FF251BE4E500D2B859 /* EncoderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD27C9FE251BE4E500D2B859 /* EncoderData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		FD0A9D102519FE6900BAD1F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD0A9D122519FE6900BAD1F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD0A9D18251A96FB00BAD1F4 /* HandlerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandlerData.swift; sourceTree = "<group>"; };
+		FD27C9FC251BE46500D2B859 /* ManagerKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerKeys.swift; sourceTree = "<group>"; };
+		FD27C9FE251BE4E500D2B859 /* EncoderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncoderData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,12 +64,14 @@
 			children = (
 				FD0A9D042519FE3200BAD1F4 /* AppDelegate.swift */,
 				FD0A9D062519FE3200BAD1F4 /* SceneDelegate.swift */,
-				FD0A9D18251A96FB00BAD1F4 /* HandlerData.swift */,
+				FD27C9FE251BE4E500D2B859 /* EncoderData.swift */,
+				FD27C9FC251BE46500D2B859 /* ManagerKeys.swift */,
 				FD0A9D082519FE3200BAD1F4 /* ViewController.swift */,
 				FD0A9D0A2519FE3200BAD1F4 /* Main.storyboard */,
 				FD0A9D0D2519FE6800BAD1F4 /* Assets.xcassets */,
 				FD0A9D0F2519FE6900BAD1F4 /* LaunchScreen.storyboard */,
 				FD0A9D122519FE6900BAD1F4 /* Info.plist */,
+				FD0A9D18251A96FB00BAD1F4 /* HandlerData.swift */,
 			);
 			path = "Secure Enclave";
 			sourceTree = "<group>";
@@ -141,8 +147,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD27C9FF251BE4E500D2B859 /* EncoderData.swift in Sources */,
 				FD0A9D19251A96FB00BAD1F4 /* HandlerData.swift in Sources */,
 				FD0A9D092519FE3200BAD1F4 /* ViewController.swift in Sources */,
+				FD27C9FD251BE46500D2B859 /* ManagerKeys.swift in Sources */,
 				FD0A9D052519FE3200BAD1F4 /* AppDelegate.swift in Sources */,
 				FD0A9D072519FE3200BAD1F4 /* SceneDelegate.swift in Sources */,
 			);
