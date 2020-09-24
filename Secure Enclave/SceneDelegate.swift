@@ -30,18 +30,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         //test()
     }
 
-    func test() {
-        let handler = HandlerData.init()
-        if let stEncode = handler.getStringSecDataBase64InUserDefault() {
-            print("predEncode = ",handler.dencodingStringBase64ToString(stringSecretDataBase64: stEncode))
-        }else {
-            print("predIncode = nil")
-        }
-        let stEncode = handler.encodingStringToSecretStringBase64(stringInput: "Anatoly")
-        print("stEncode = ",stEncode)
-        print("stDecode = ",handler.dencodingStringBase64ToString(stringSecretDataBase64: stEncode))
-        handler.saveStringSecDataBase64InUserDefault(string: stEncode)
-    }
+//    func test() {
+//        let handler = HandlerData.init()
+//        if let stEncode = handler.getStringSecDataBase64InUserDefault() {
+//            print("predEncode = ",handler.dencodingStringBase64ToString(stringSecretDataBase64: stEncode))
+//        }else {
+//            print("predIncode = nil")
+//        }
+//        let stEncode = handler.encodingStringToSecretStringBase64(stringInput: "Anatoly")
+//        print("stEncode = ",stEncode)
+//        print("stDecode = ",handler.dencodingStringBase64ToString(stringSecretDataBase64: stEncode))
+//        handler.saveStringSecDataBase64InUserDefault(string: stEncode)
+//    }
 
 
     func sceneDidDisconnect(_ scene: UIScene) {
